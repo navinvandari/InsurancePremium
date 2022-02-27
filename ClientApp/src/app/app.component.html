@@ -1,0 +1,53 @@
+<app-header></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-7 mrgnbtm">
+      <h2>Your Details</h2>
+      <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="exampleInputEmail1">Name</label>
+            <input type="text" class="form-control" formControlName="Name" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Name">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="exampleInputPassword1">Age</label>
+            <input type="text" class="form-control" formControlName="Age" id="exampleInputPassword2" placeholder="Age">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="exampleInputEmail1">Date Of Birth</label>
+            <input type="text" class="form-control" formControlName="DateOfBirth" id="exampleInputEmail3" aria-describedby="emailHelp" placeholder="DD-MM-YYYY">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="exampleInputEmail1">Death Sum Insured</label>
+            <input type="text" class="form-control" formControlName="DeathSumInsured" id="exampleInputEmail4" aria-describedby="emailHelp" placeholder="Death Sum Insured">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-12" >
+            <label for="exampleInputPassword1">Occupation</label>
+            <select formControlName="Occupation" class="form-control" (change)='onOptionsSelected($event)' >
+              <option disabled>--Select--</option>
+              <option *ngFor="let occ of occupations"
+                      value={{occ.occupation}}>
+                {{occ.occupation}}
+              </option>
+            </select>           
+          </div>
+        </div>
+        <button type="button" (click)="onClearEvent()" class="btn btn-danger">Clear</button>
+      </form>
+    </div>
+    <div class="col-md-4 mrgnbtm">
+      <app-display-board
+       [premium]="premium"
+       (getUsersEvent)="getAllUsers()"
+      >
+      </app-display-board>
+    </div>
+  </div>
+</div>
+<div class="mrgnbtm">
+  <app-users *ngIf="users.length !== 0" [users]="users"></app-users>
+</div>

@@ -1,0 +1,28 @@
+<div class="container">
+  <h2>Insured Persons</h2>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>User Id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Date Of Birth</th>
+        <th>Occupation</th>
+        <th>Death Sum Insured</th>
+        <th>Monthly Premium</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users; let i = index">
+        <td>{{i + 1}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.age}}</td>
+        <td>{{user.dateOfBirth}}</td>
+        <td>{{user.occupation}}</td>
+        <td>{{user.deathSumInsured}}</td>
+        <td>{{user.monthlyPremium}}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+</div>
