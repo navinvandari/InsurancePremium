@@ -8,7 +8,7 @@ export class AppService {
 
   constructor(private http: HttpClient) { }
 
-  rootURL = '/api';
+  rootURL = '/v1';
 
   getUsers() {
     return this.http.get(this.rootURL + '/users');

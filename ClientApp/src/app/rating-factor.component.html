@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>Rating Factors</h2>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Rating</th>
+        <th>Factor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let fac of factors; let i = index">
+        <td>{{fac.rating}}</td>
+        <td>{{fac.factor}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

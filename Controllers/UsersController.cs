@@ -23,28 +23,28 @@ namespace angular_dotnet_example.Controllers
         }
 
         [HttpGet]
-        [Route("api/users")]
+        [Route("v1/users")]
         public IEnumerable<Models.UserModel> GetAllUsers()
         {
             return repository.GetAll();
         }
 
         [HttpGet]
-        [Route("api/occupation")]
+        [Route("v1/occupation")]
         public IEnumerable<Models.OccupationRating> GetAllOccupation()
         {
             return repository.GetAllOccupation();
         }
 
         [HttpGet]
-        [Route("api/factor")]
+        [Route("v1/factor")]
         public IEnumerable<Models.RatingFactor> GetRatingFactor()
         {
             return repository.GetRatingFactor();
         }
 
         [HttpPost]
-        [Route("api/user")]
+        [Route("v1/user")]
         [Consumes("application/json")]
         public Models.UserModel PostUser(Models.UserModel item)
         {

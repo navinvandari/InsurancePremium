@@ -10,6 +10,8 @@ import { HeaderComponent } from './header/header.component';
 import { DisplayBoardComponent } from './display-board.component';
 import { UsersComponent } from './users.component';
 import { environment } from '../environments/environment';
+import { OccupationRatingComponent } from './occupation-rating.component';
+import { RatingFactorComponent } from './rating-factor.component';
 
 // state related imports
 // import { StoreModule } from '@ngrx/store';
@@ -23,7 +25,9 @@ import { environment } from '../environments/environment';
     AppComponent,
     HeaderComponent,
     DisplayBoardComponent,
-    UsersComponent
+    UsersComponent,
+    OccupationRatingComponent,
+    RatingFactorComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>Occupation Rating</h2>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Occupation</th>
+        <th>Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let occ of occupations; let i = index">
+        <td>{{occ.occupation}}</td>
+        <td>{{occ.rating}}</td>
+      </tr>
+    </tbody>
+  </table>  
+</div>
