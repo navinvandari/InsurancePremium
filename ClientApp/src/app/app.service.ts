@@ -22,4 +22,8 @@ export class AppService {
     return this.http.get(this.rootURL + '/occupation');
   }
 
+  getFactor() {
+    return this.http.get(this.rootURL + '/factor');
+  }
+
 }

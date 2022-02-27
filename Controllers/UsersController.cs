@@ -36,6 +36,13 @@ namespace angular_dotnet_example.Controllers
             return repository.GetAllOccupation();
         }
 
+        [HttpGet]
+        [Route("api/factor")]
+        public IEnumerable<Models.RatingFactor> GetRatingFactor()
+        {
+            return repository.GetRatingFactor();
+        }
+
         [HttpPost]
         [Route("api/user")]
         [Consumes("application/json")]

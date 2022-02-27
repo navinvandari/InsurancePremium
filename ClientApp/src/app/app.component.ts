@@ -26,6 +26,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   users: any[] = [];
   occupations: any[] = [];
+  factors: any[] = [];
   premium = 0;
   value;
 
@@ -76,9 +77,17 @@ export class AppComponent implements OnInit, OnDestroy {
     });
   }
 
+  getFactor() {
+    this.appService.getFactor().pipe(takeUntil(this.destroy$)).subscribe((factors: any[]) => {
+      this.factors = factors;
+    });
+  }
+
+
   ngOnInit() {
     this.getAllUsers();
     this.getAllOccupation();
+    this.getFactor();
   }
 
   ngOnDestroy() {

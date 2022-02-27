@@ -41,6 +41,10 @@ namespace angular_dotnet_example.Models
             return occupationRatings;
         }
 
+        public IEnumerable<RatingFactor> GetRatingFactor() { 
+            return ratingFactors;
+        }
+
         public UserModel Add(UserModel item)
         {
             users.Clear();

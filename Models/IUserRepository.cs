@@ -9,6 +9,8 @@ namespace angular_dotnet_example.Models
 
         IEnumerable<OccupationRating> GetAllOccupation();
 
+        IEnumerable<RatingFactor> GetRatingFactor();
+
         UserModel Add(UserModel user);
     }
 }
